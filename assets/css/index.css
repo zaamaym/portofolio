@@ -139,6 +139,12 @@ h1 { font-size: 2.5rem; letter-spacing: -1px; }
 /* --- Teks Gradasi Alami (Seamless Flow) --- */
 /* --- Teks Gradasi Alami (Seamless Flow) --- */
 h1 span {
+    /* 🟢 FIX 1: Ubah sifat elemen biar browser gak nge-bug saat dianimasikan */
+    display: inline-block; 
+    
+    /* 🟢 FIX 2: Cadangan kalau -webkit-text-fill-color gak terbaca */
+    color: transparent; 
+
     background: linear-gradient(
         to right, 
         #0071e3 0%,   
@@ -149,10 +155,8 @@ h1 span {
     );
     background-size: 200% auto; 
     
-    /* FIX: Gunakan dua baris ini agar berfungsi di semua browser */
     -webkit-background-clip: text; 
     background-clip: text;
-    
     -webkit-text-fill-color: transparent;
     animation: gradientTextFlow 8s linear infinite; 
 }
