@@ -8,6 +8,7 @@
     --card-shadow: 0 15px 35px rgba(0,0,0,0.05);
 }
 
+
 body {
     font-family: -apple-system, system-ui, sans-serif;
     background: var(--bg-gradient);
@@ -77,13 +78,7 @@ body {
         pointer-events: none; /* Biar gak bisa diklik pas lagi sembunyi */
     }
 
-    /* Penyesuaian Dark Mode untuk Menu Melayang */
-    @media (prefers-color-scheme: dark) {
-        .nav-links {
-            background: rgba(30, 30, 35, 0.85);
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-    }
+    
 
     /* Saat Hamburger Diklik (Muncul) */
     .nav-links.active { 
@@ -135,14 +130,7 @@ section {
     box-shadow: var(--card-shadow);
 }
 
-@media (prefers-color-scheme: dark) {
-    section {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-left: 1px solid rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-    }
-}
+
 
 h1 { font-size: 2.5rem; letter-spacing: -1px; }
 /* --- Teks Gradasi Bergerak --- */
@@ -159,7 +147,7 @@ h1 span {
         #0071e3 100%  /* 5. Tutup dengan Biru lagi! */
     );
     background-size: 200% auto; /* Lebarkan kanvas 2x lipat */
-    -webkit-background-clip: text; 
+    -background-clip: text; 
     -webkit-text-fill-color: transparent;
     animation: gradientTextFlow 8s linear infinite; 
 }
@@ -273,10 +261,7 @@ h1 span {
     position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-    .finder-window { background: rgba(30, 30, 30, 0.4); }
-    .finder-header { background: rgba(50, 50, 50, 0.5); }
-}
+
 
 .mac-buttons { display: flex; gap: 8px; position: absolute; }
 .mac-btn { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
@@ -422,12 +407,7 @@ h1 span {
     z-index: 0; /* Paling belakang */
 }
 
-@media (prefers-color-scheme: dark) {
-    .card-panel-bg { 
-        background: rgba(30, 30, 35, 0.7); 
-        border-color: rgba(255, 255, 255, 0.1);
-    }
-}
+
 
 /* 🔴 LAYER 3: FOTO AZZAM (Tinggi Ngelewatin Panel) */
 .pop-out-avatar {
