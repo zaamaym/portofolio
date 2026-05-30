@@ -139,17 +139,20 @@ h1 { font-size: 2.5rem; letter-spacing: -1px; }
 /* --- Teks Gradasi Alami (Seamless Flow) --- */
 /* --- Teks Gradasi Alami (Seamless Flow) --- */
 h1 span {
-    /* Kunci Rahasia: Warna pertama dan terakhir HARUS sama (#0071e3) */
     background: linear-gradient(
         to right, 
-        #0071e3 0%,   /* 1. Mulai dari Biru */
-        #4CAF50 25%,  /* 2. Ke Hijau */
-        #ff9f0a 50%,  /* 3. Ke Oranye */
-        #4CAF50 75%,  /* 4. Balik ke Hijau */
-        #0071e3 100%  /* 5. Tutup dengan Biru lagi! */
+        #0071e3 0%,   
+        #4CAF50 25%,  
+        #ff9f0a 50%,  
+        #4CAF50 75%,  
+        #0071e3 100%  
     );
-    background-size: 200% auto; /* Lebarkan kanvas 2x lipat */
-    -background-clip: text; 
+    background-size: 200% auto; 
+    
+    /* FIX: Gunakan dua baris ini agar berfungsi di semua browser */
+    -webkit-background-clip: text; 
+    background-clip: text;
+    
     -webkit-text-fill-color: transparent;
     animation: gradientTextFlow 8s linear infinite; 
 }
